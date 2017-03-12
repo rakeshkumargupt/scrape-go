@@ -4,7 +4,7 @@ This package is a place to put some simple tools which build on top of the Go HT
 Scrape defines traversal functions like Callhttp with input request and GetProductDetails, while attempting to be generic.         
 It also uses convenience functions such as find and selection and more from GoQuery.
 
-# Sample
+# A full example: Scraping Amazon Product Information
 
         package main
 
