@@ -1,19 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"github.com/rakeshkumargupt/scrape-go/utils"
-	"github.com/PuerkitoBio/goquery"
 	"encoding/json"
-	"os"
+	"fmt"
+	"github.com/PuerkitoBio/goquery"
+	"github.com/rakeshkumargupt/scrape-go/utils"
 	"io"
+	"os"
 )
 
 func main() {
 	fmt.Println("Starting main..")
 
 	//  Set header in request with key & value[OPTIONAL]
-	 m := map[string]string{}
+	m := map[string]string{}
 
 	// Method to call http
 	method := "GET"
@@ -22,8 +22,9 @@ func main() {
 	var body io.Reader
 	_ = body
 
-	// URL to call for scrapping[choose here different category for getting data about product]
-	url  := "http://www.amazon.com/gp/bestsellers/beauty#1"
+	// URL to call for scrapping
+	// Here choose here different category for getting data about product
+	url := "http://www.amazon.com/gp/bestsellers/beauty#1"
 
 	// Getting http response
 	resp, err := utils.CallHttp(url, method, nil, m)
